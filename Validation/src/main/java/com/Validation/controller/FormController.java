@@ -1,6 +1,5 @@
 package com.Validation.controller;
 
-import com.Validation.model.LoginForm;
 import com.Validation.model.UserProfile;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
@@ -36,19 +35,7 @@ public class FormController {
     }
 
     @GetMapping("/login")
-    public String loginForm(Model model) {
-        model.addAttribute("loginForm", new LoginForm());
+    public String loginForm() {
         return "login";
-    }
-
-    @PostMapping("/login")
-    public String submitLogin(@Valid @ModelAttribute("loginForm") LoginForm loginForm,
-                              BindingResult bindingResult,
-                              Model model) {
-        if (bindingResult.hasErrors()) {
-            return "login";
-        }
-        model.addAttribute("loginForm", loginForm);
-        return "login-result";
     }
 }
