@@ -5,6 +5,7 @@ import jakarta.validation.constraints.*;
 public class UserProfile {
 
     @NotEmpty(message = "Name cannot be empty")
+    @Pattern(regexp = "^[A-Za-z]+$", message = "Only alphabets characters are allowed")
     private String name;
 
     @NotNull(message = "Field cannot be null")
