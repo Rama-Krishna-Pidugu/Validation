@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Profile Saved</title>
+    <style>
+        /* body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; padding: 20px; }
+        h1 { color: #16a34a; }
+        .success { background: #dcfce7; padding: 15px; border-radius: 6px; margin: 15px 0; }
+        dl { margin: 0; }
+        dt { font-weight: bold; margin-top: 10px; }
+        dd { margin-left: 0; }
+        a { color: #2563eb; } */
+    </style>
+</head>
+<body>
+    <h1>Profile saved successfully</h1>
+    <div class="success">
+        <dl>
+            <dt>Name</dt>
+            <dd th:text="${userProfile.name}"></dd>
+            <dt>Username</dt>
+            <dd th:text="${userProfile.username}"></dd>
+            <dt>Age</dt>
+            <dd th:text="${userProfile.age}"></dd>
+            <dt>Salary</dt>
+            <dd th:text="${userProfile.salary}"></dd>
+        </dl>
+    </div>
+    <a th:href="@{/profile}">Create another profile</a> |
+    <a th:href="@{/}">Home</a>
+</body>
+</html>

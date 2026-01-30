@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Login Success</title>
+    <style>
+        /* body { font-family: Arial, sans-serif; max-width: 400px; margin: 40px auto; padding: 20px; }
+        h1 { color: #16a34a; }
+        .success { background: #dcfce7; padding: 15px; border-radius: 6px; }
+        a { color: #2563eb; } */
+    </style>
+</head>
+<body>
+    <h1>Login successful</h1>
+    <div class="success">
+        <p>Welcome, <strong th:text="${loginForm.username}"></strong>!</p>
+    </div>
+    <a th:href="@{/login}">Login again</a> |
+    <a th:href="@{/}">Home</a>
+</body>
+</html>
